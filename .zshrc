@@ -97,10 +97,10 @@ source $ZSH/oh-my-zsh.sh
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper_lazy.sh
 
-# ESP32/ESP8266 dev toolkit
+# ESP32 toolchain
 export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
-export IDF_PATH="$HOME/esp/esp-idf" # ESP32
-#export IDF_PATH="/opt/Espressif/ESP8266_RTOS_SDK" # ESP8266
+export IDF_PATH="$HOME/esp/esp-idf"
 
-export PATH="/opt/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin:$PATH"
-export SDK_BASE="/opt/Espressif/ESP8266_NONOS_SDK"
+# ESP8266 toolchain
+export ESP_HOME=/opt/esp-open-sdk
+export SMING_HOME=/opt/Sming/Sming
