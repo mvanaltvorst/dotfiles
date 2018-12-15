@@ -104,3 +104,6 @@ export IDF_PATH="$HOME/esp/esp-idf"
 # ESP8266 toolchain
 export ESP_HOME=/opt/esp-open-sdk
 export SMING_HOME=/opt/Sming/Sming
+export PATH=$PATH:$ESP_HOME/esptool2
+export PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
+
