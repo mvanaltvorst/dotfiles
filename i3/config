@@ -189,6 +189,9 @@ exec_always --no-startup-id xscreensaver-command -exit &
 exec_always --no-startup-id xscreensaver -no-splash &     
 exec_always --no-startup-id xss-lock -- i3lock &
 
+# background
+exec_always --no-startup-id feh --bg-fill --no-fehbg ~/.wallpaper
+
 # Get colors from Xresources
 set_from_resource $xforeground foreground
 set_from_resource $xbackground background
@@ -243,5 +246,13 @@ bar {
     }
 }
 
-
+exec --no-startup-id amixer set Master 20%
+exec --no-startup-id amixer set Master mute
+exec --no-startup-id amixer set Capture 95%
+exec --no-startup-id amixer set Capture nocap
+# exec --no-startup-id amixer -D bluealsa sset 'Maurits’s AirPods - A2DP' 100%
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
+bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 
