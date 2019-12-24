@@ -94,16 +94,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Python virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper_lazy.sh
+# export WORKON_HOME=$HOME/.virtualenvs
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # ESP32 toolchain
-export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
-export IDF_PATH="$HOME/esp/esp-idf"
-
+# export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
+# export IDF_PATH="$HOME/esp/esp-idf"
+ 
 # ESP8266 toolchain
-export ESP_HOME=/opt/esp-open-sdk
-export SMING_HOME=/opt/Sming/Sming
-export PATH=$PATH:$ESP_HOME/esptool2
-export PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
+# export ESP_HOME=/opt/esp-open-sdk
+# export SMING_HOME=/opt/Sming/Sming
+# export PATH=$PATH:$ESP_HOME/esptool2
+# export PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 
