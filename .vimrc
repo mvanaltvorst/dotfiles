@@ -19,6 +19,20 @@ Plugin 'VundleVim/Vundle.vim'
 "autocomplete
 "Plugin 'Valloric/YouCompleteMe'
 
+"LaTeX
+Plugin 'lervag/vimtex'
+let g:vimtex_view_method = 'zathura'
+Plugin 'KeitaNakamura/tex-conceal.vim'                 " for Vundle
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+"Snippets
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips/']
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -59,4 +73,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
- " Put your non-Plugin stuff after this line
+" Put your non-Plugin stuff after this line
+setlocal spell
+set spelllang=nl,en_gb
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
