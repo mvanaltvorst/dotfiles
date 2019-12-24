@@ -28,5 +28,6 @@ ln -sfn ${PWD}/.zshrc ${HOME}
 ln -sfn ${PWD}/.tmux.conf  ${HOME}
 ln -sfn ${PWD}/.vimrc ${HOME}
 ln -sfn ${PWD}/i3/ ${HOME}/.config/
+ln -sfn ${PWD}/polybar/ ${HOME}/.config/
 ln -sfn ${PWD}/.colors/ ${HOME}
 ln -sfn ${PWD}/.dircolors/ ${HOME}
