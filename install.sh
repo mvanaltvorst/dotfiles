@@ -19,6 +19,8 @@
 
 set -o nounset                                  # Treat unset variables as an error
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 ln -sfn ${PWD}/.scripts/ ${HOME}
 ln -sfn ${PWD}/.wallpaper ${HOME}
 ln -sfn ${PWD}/.Xresources ${HOME}
