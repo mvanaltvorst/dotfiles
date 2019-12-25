@@ -213,19 +213,21 @@ set_from_resource $xcolor7 color7
 set_from_resource $xcolor15 color15
 
 # Colors
-# Class                 border          backgr      text            indic
-client.focused          $xcolor6       $xbackground     $xbackground   $xcolor15
-client.focused_inactive $xcolor6       $xcolor15     $xcolor14
-client.unfocused        $xcolor6       $xcolor15     $xcolor14
-client.urgent           $xbackground   $xcolor9     $xbackground
-client.placeholder      $xcolor7       $xcolor7     $xcolor14
+# Class                 border         backgr        text           indic
+client.focused          $xcolor6       $xbackground  $xbackground   $xcolor15
+client.focused          $xcolor6       $xbackground     $xbackground
+client.focused_inactive $xcolor6       $xbackground  $xcolor14
+client.unfocused        $xcolor6       $xbackground  $xcolor14
+client.urgent           $xbackground   $xcolor9      $xbackground
+client.placeholder      $xcolor7       $xcolor7      $xcolor14
+
 
 # PulseAudio volume controls
 exec --no-startup-id amixer set Master 20%
 exec --no-startup-id amixer set Master mute
 exec --no-startup-id amixer set Capture 95%
 exec --no-startup-id amixer set Capture nocap
-# exec --no-startup-id amixer -D bluealsa sset 'Maurits’s AirPods - A2DP' 100%
+# exec --no-startup-id amixer -D bluealsa sset 'Maurits’ AirPods - A2DP' 100%
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
@@ -235,7 +237,7 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-for_window [class="^.*"] border pixel 1
-new_window 1pixel
+# for_window [class="^.*"] border pixel 1
+new_window none
 
 exec --no-startup-id redshift -t 6500:3000 &
