@@ -66,11 +66,13 @@ label-disconnected-foreground = ${colors.foreground}
 type = internal/date
 interval = 5
 
-date = "%a %d %b,"
-date-alt = "%d/%m/%y"
+; date = "%a %d %b,"
+; date-alt = "%d/%m/%y"
+date = "%d/%m"
 time = "%H:%M"
 time-alt = %H:%M
 
+; label = " %date% %time%"
 label = " %date% %time%"
 
 [module/volume]
@@ -91,9 +93,11 @@ label-muted-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
-full-at = 98
-battery = BAT1
-adapter = ADP1
+full-at = 100
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC
 format-charging = <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
@@ -112,7 +116,7 @@ type = custom/script
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-exec = echo "$(hostname -i | awk '{print $1}')"
+exec = echo "$(hostname -I | awk '{print $1}')"
 
 [module/hostname]
 ftype = custom/script
