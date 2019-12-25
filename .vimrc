@@ -33,6 +33,9 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips/']
 
+"Color scheme
+" Plugin 'arcticicestudio/nord-vim'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -74,6 +77,8 @@ set shiftwidth=4
 set expandtab
 
 " Put your non-Plugin stuff after this line
-setlocal spell
+" setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 set spelllang=nl,en_gb
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+" colorscheme nord

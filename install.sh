@@ -30,6 +30,7 @@ ln -sfn ${PWD}/.vimrc ${HOME}
 ln -sfn ${PWD}/i3/ ${HOME}/.config/
 ln -sfn ${PWD}/polybar/ ${HOME}/.config/
 ln -sfn ${PWD}/zathura/ ${HOME}/.config/
+ln -sfn ${PWD}/termite/ ${HOME}/.config/
 ln -sfn ${PWD}/UltiSnips/ ${HOME}/.vim/
 ln -sfn ${PWD}/.colors/ ${HOME}
 ln -sfn ${PWD}/.dircolors/ ${HOME}
