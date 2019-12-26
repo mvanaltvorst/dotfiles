@@ -22,8 +22,8 @@ Plugin 'VundleVim/Vundle.vim'
 "LaTeX
 Plugin 'lervag/vimtex'
 let g:vimtex_view_method = 'zathura'
-Plugin 'KeitaNakamura/tex-conceal.vim'                 " for Vundle
-set conceallevel=1
+Plugin 'KeitaNakamura/tex-conceal.vim'
+set conceallevel=2
 let g:tex_conceal='abdmg'
 
 "Snippets
@@ -34,7 +34,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips/']
 
 "Color scheme
-" Plugin 'arcticicestudio/nord-vim'
+Plugin 'dylanaraps/wal.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -78,7 +78,7 @@ set expandtab
 
 " Put your non-Plugin stuff after this line
 " setlocal spell
-autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.tex setlocal spell
 set spelllang=nl,en_gb
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-" colorscheme nord
+colorscheme wal

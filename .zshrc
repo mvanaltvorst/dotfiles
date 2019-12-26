@@ -107,3 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # export PATH=$PATH:$ESP_HOME/esptool2
 # export PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 
+# pywal color scheme
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+export PATH="$HOME/.local/bin:$PATH"
+
+
