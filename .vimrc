@@ -33,6 +33,10 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips/']
 
+
+"Note taking
+Plugin 'vimwiki/vimwiki'
+
 "Color scheme
 Plugin 'dylanaraps/wal.vim'
 
@@ -71,7 +75,6 @@ filetype plugin indent on    " required
 syntax on
 set number
 
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab

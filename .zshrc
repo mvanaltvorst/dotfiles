@@ -112,4 +112,5 @@ source $ZSH/oh-my-zsh.sh
 source ~/.cache/wal/colors-tty.sh
 export PATH="$HOME/.local/bin:$PATH"
 
-
+# vim everywhere
+export EDITOR=vim

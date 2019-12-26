@@ -192,34 +192,34 @@ exec_always --no-startup-id xss-lock -- i3lock &
 exec_always --no-startup-id feh --bg-fill --no-fehbg ~/.wallpaper
 
 # Get colors from Xresources
-set_from_resource $xforeground foreground
-set_from_resource $xbackground background
-set_from_resource $xcursor cursorColor
-set_from_resource $xcolor0 color0
-set_from_resource $xcolor8 color8
-set_from_resource $xcolor1 color1
-set_from_resource $xcolor9 color9
-set_from_resource $xcolor2 color2
-set_from_resource $xcolor10 color10
-set_from_resource $xcolor3 color3
-set_from_resource $xcolor11 color11
-set_from_resource $xcolor4 color4
-set_from_resource $xcolor12 color12
-set_from_resource $xcolor5 color5
-set_from_resource $xcolor13 color13
-set_from_resource $xcolor6 color6
-set_from_resource $xcolor14 color14
-set_from_resource $xcolor7 color7
-set_from_resource $xcolor15 color15
+#set_from_resource $xforeground foreground
+#set_from_resource $xbackground background
+#set_from_resource $xcursor cursorColor
+#set_from_resource $xcolor0 color0
+#set_from_resource $xcolor8 color8
+#set_from_resource $xcolor1 color1
+#set_from_resource $xcolor9 color9
+#set_from_resource $xcolor2 color2
+#set_from_resource $xcolor10 color10
+#set_from_resource $xcolor3 color3
+#set_from_resource $xcolor11 color11
+#set_from_resource $xcolor4 color4
+#set_from_resource $xcolor12 color12
+#set_from_resource $xcolor5 color5
+#set_from_resource $xcolor13 color13
+#set_from_resource $xcolor6 color6
+#set_from_resource $xcolor14 color14
+#set_from_resource $xcolor7 color7
+#set_from_resource $xcolor15 color15
 
 # Colors
 # Class                 border         backgr        text           indic
-client.focused          $xcolor6       $xbackground  $xbackground   $xcolor15
-client.focused          $xcolor6       $xbackground     $xbackground
-client.focused_inactive $xcolor6       $xbackground  $xcolor14
-client.unfocused        $xcolor6       $xbackground  $xcolor14
-client.urgent           $xbackground   $xcolor9      $xbackground
-client.placeholder      $xcolor7       $xcolor7      $xcolor14
+#client.focused          $xcolor6       $xbackground  $xbackground   $xcolor15
+#client.focused          $xcolor6       $xbackground     $xbackground
+#client.focused_inactive $xcolor6       $xbackground  $xcolor14
+#client.unfocused        $xcolor6       $xbackground  $xcolor14
+#client.urgent           $xbackground   $xcolor9      $xbackground
+#client.placeholder      $xcolor7       $xcolor7      $xcolor14
 
 
 # PulseAudio volume controls
@@ -241,3 +241,4 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 new_window none
 
 exec --no-startup-id redshift -t 6500:3000 &
+exec --no-startup-id wal -R

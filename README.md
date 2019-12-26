@@ -7,3 +7,7 @@
 - zsh
 - i3wm
 - termite
+- pywal
+- Dropbox
+- spacemacs
+
