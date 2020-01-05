@@ -165,7 +165,6 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -241,4 +240,5 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 new_window none
 
 exec --no-startup-id redshift -t 6500:3000 &
-exec --no-startup-id wal -R
+exec_always --no-startup-id wal -R; $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh

@@ -111,13 +111,6 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-[module/ip]
-type = custom/script
-format = <label>
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-exec = echo "$(hostname -I | awk '{print $1}')"
-
 [module/hostname]
 ftype = custom/script
 format = "<label> "
