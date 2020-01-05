@@ -1,13 +1,22 @@
+### About
+My dotfiles, meant to be cross-compatible with GalliumOS and Manjaro-i3
 ### Requirements
-- Source Code Pro, Iosevka (terminal), Font Awesome (glyps in polybar)
+- Iosevka (terminal + polybar), Font Awesome (glyps in polybar)
+    - `yay ttf-iosevka`
 - polybar
+    - `sudo pacman -S polybar`
 - zathura
+    - `sudo pacman -S zathura`
 - vim + Vundle.vim
-- xbacklight
+    - `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 - zsh
-- i3wm
+    - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - termite
+    - `sudo pacman -S termite`
 - pywal
+    - `sudo pacman -S python-pip`
+    - `sudo pip3 install pywal`
+    - `wal --theme base16-nord`
 - Dropbox
-- spacemacs
-
+- feh
+    - `sudo pacman -S feh`
