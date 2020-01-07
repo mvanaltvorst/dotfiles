@@ -180,9 +180,7 @@ mode "$mode_system" {
 }
 
 bindsym XF86PowerOff mode "$mode_system"
-bindsym F8 exec amixer -q -D pulse sset Master toggle
-bindsym F9 exec amixer -q -D pulse sset Master 5%- on
-bindsym F10 exec amixer -q -D pulse sset Master 5%+ on    
+
 # exec_always --no-startup-id xscreensaver-command -exit &
 # exec_always --no-startup-id xscreensaver -no-splash &     
 exec_always --no-startup-id xss-lock -- i3lock &
@@ -190,48 +188,15 @@ exec_always --no-startup-id xss-lock -- i3lock &
 # background
 exec_always --no-startup-id feh --bg-fill --no-fehbg ~/.wallpaper
 
-# Get colors from Xresources
-#set_from_resource $xforeground foreground
-#set_from_resource $xbackground background
-#set_from_resource $xcursor cursorColor
-#set_from_resource $xcolor0 color0
-#set_from_resource $xcolor8 color8
-#set_from_resource $xcolor1 color1
-#set_from_resource $xcolor9 color9
-#set_from_resource $xcolor2 color2
-#set_from_resource $xcolor10 color10
-#set_from_resource $xcolor3 color3
-#set_from_resource $xcolor11 color11
-#set_from_resource $xcolor4 color4
-#set_from_resource $xcolor12 color12
-#set_from_resource $xcolor5 color5
-#set_from_resource $xcolor13 color13
-#set_from_resource $xcolor6 color6
-#set_from_resource $xcolor14 color14
-#set_from_resource $xcolor7 color7
-#set_from_resource $xcolor15 color15
-
-# Colors
-# Class                 border         backgr        text           indic
-#client.focused          $xcolor6       $xbackground  $xbackground   $xcolor15
-#client.focused          $xcolor6       $xbackground     $xbackground
-#client.focused_inactive $xcolor6       $xbackground  $xcolor14
-#client.unfocused        $xcolor6       $xbackground  $xcolor14
-#client.urgent           $xbackground   $xcolor9      $xbackground
-#client.placeholder      $xcolor7       $xcolor7      $xcolor14
-
-
 # PulseAudio volume controls
 exec --no-startup-id amixer set Master 20%
 exec --no-startup-id amixer set Master mute
 exec --no-startup-id amixer set Capture 95%
 exec --no-startup-id amixer set Capture nocap
-# exec --no-startup-id amixer -D bluealsa sset 'Maurits’ AirPods - A2DP' 100%
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle; exec --no-startup-id pkill  -RTMIN+10 i3blocks;
-bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
-
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- on
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ on    
+#
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
@@ -243,6 +208,5 @@ exec--no-startup-id redshift -t 6500:3000 &
 exec_always --no-startup-id wal -R; $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-gaps inner 10
-gaps outer 15
-gaps innter 10
+gaps inner 0
+gaps outer 0

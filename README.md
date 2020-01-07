@@ -24,3 +24,10 @@ My dotfiles, meant to be compatible with Manjaro-i3
     - `sudo pacman -S redshift`
 - bumblebee
     - `sudo mhwd -a pci nonfree 0300`
+    - `sudo mhwd -r pci video-linux`
+- tlp
+    - `sudo pacman -S powertop tlp`
+    - `sudo tlp start`
+
+### Other
+- Tick "Hardware clock in local time zone" in Manjaro settings
