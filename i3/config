@@ -239,6 +239,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 # for_window [class="^.*"] border pixel 1
 new_window none
 
-exec --no-startup-id redshift -t 6500:3000 &
+exec--no-startup-id redshift -t 6500:3000 &
 exec_always --no-startup-id wal -R; $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+gaps inner 10
+gaps outer 15
+gaps innter 10

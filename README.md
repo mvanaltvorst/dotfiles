@@ -1,8 +1,8 @@
 ### About
-My dotfiles, meant to be cross-compatible with GalliumOS and Manjaro-i3
+My dotfiles, meant to be compatible with Manjaro-i3
 ### Requirements
 - Iosevka (terminal + polybar), Font Awesome (glyps in polybar)
-    - `yay ttf-iosevka`
+    - `yay ttf-iosevka ttf-font-awesome`
 - polybar
     - `sudo pacman -S polybar`
 - zathura
@@ -20,3 +20,7 @@ My dotfiles, meant to be cross-compatible with GalliumOS and Manjaro-i3
 - Dropbox
 - feh
     - `sudo pacman -S feh`
+- redshift
+    - `sudo pacman -S redshift`
+- bumblebee
+    - `sudo mhwd -a pci nonfree 0300`
