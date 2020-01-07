@@ -181,6 +181,9 @@ mode "$mode_system" {
 
 bindsym XF86PowerOff mode "$mode_system"
 
+# Locking
+set_from_resource $lockbg i3wm.color0 #448844
+
 # exec_always --no-startup-id xscreensaver-command -exit &
 # exec_always --no-startup-id xscreensaver -no-splash &     
 exec_always --no-startup-id xss-lock -- i3lock &
@@ -204,7 +207,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 # for_window [class="^.*"] border pixel 1
 new_window none
 
-exec--no-startup-id redshift -t 6500:3000 &
+exec --no-startup-id redshift -t 6500:3000 &
 exec_always --no-startup-id wal -R; $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 

@@ -1,12 +1,14 @@
 ### About
-My dotfiles, meant to be compatible with Manjaro-i3
+My dotfiles and system setup, meant to be compatible with Manjaro-i3
 ### Requirements
+- i3 locking
+    - `sudo pacman -S i3lock xss-lock`
 - Iosevka (terminal + polybar), Font Awesome (glyps in polybar)
     - `yay ttf-iosevka ttf-font-awesome`
 - polybar
     - `sudo pacman -S polybar`
 - zathura
-    - `sudo pacman -S zathura`
+    - `sudo pacman -S zathura zathura-pdf-mupdf`
 - vim + Vundle.vim
     - `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 - zsh
@@ -17,7 +19,6 @@ My dotfiles, meant to be compatible with Manjaro-i3
     - `sudo pacman -S python-pip`
     - `sudo pip3 install pywal`
     - `wal --theme base16-nord`
-- Dropbox
 - feh
     - `sudo pacman -S feh`
 - redshift
@@ -28,6 +29,11 @@ My dotfiles, meant to be compatible with Manjaro-i3
 - tlp
     - `sudo pacman -S powertop tlp`
     - `sudo tlp start`
+- Backlight (xbacklight)
+    - `sudo pacman -S xorg-xbacklight`
+- LaTeX dependencies
+    - `sudo pacman -S texlive-most`
+- Dropbox
 
 ### Other
 - Tick "Hardware clock in local time zone" in Manjaro settings
