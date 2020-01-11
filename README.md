@@ -35,5 +35,13 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
     - `sudo pacman -S texlive-most`
 - Dropbox
 
+### Programming
+- Rust
+    - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Jupyter notebook
+    - `sudo pip3 install jupyter`
+- GDB + radare2
+    - `sudo pacman -S gdb radare2`
+
 ### Other
 - Tick "Hardware clock in local time zone" in Manjaro settings
