@@ -1,4 +1,4 @@
-About
+### About
 My dotfiles and system setup, meant to be compatible with Manjaro-i3
 ### Requirements
 - i3 locking
@@ -44,7 +44,7 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
       - this is one-way only, so only machine => Dropbox
     - `sudo pacman -S rclone entr`
     - `systemctl --user enable dropbox`
-j
+
 ### Programming
 - Rust
     - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
