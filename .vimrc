@@ -1,4 +1,5 @@
 set hlsearch
+set conceallevel=2
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -13,8 +14,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 "markdown
-"Plugin 'godlygeek/tabular'
-"Plugin 'plasticboy/vim-markdown'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_math = 1
 
 "autocomplete
 "Plugin 'Valloric/YouCompleteMe'
@@ -23,7 +25,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'lervag/vimtex'
 let g:vimtex_view_method = 'zathura'
 Plugin 'KeitaNakamura/tex-conceal.vim'
-set conceallevel=2
 let g:tex_conceal='abdmg'
 
 "Snippets

@@ -114,7 +114,7 @@ ramp-capacity-4 = 
 [module/ip]
 type = custom/script
 format = <label>
-format-prefix = " "
+;format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 exec = echo "$(hostname -I | awk '{print $1}')"
 
