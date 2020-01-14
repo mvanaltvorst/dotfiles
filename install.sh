@@ -31,6 +31,7 @@ ln -sfn ${PWD}/zathura/ ${HOME}/.config/
 ln -sfn ${PWD}/termite/ ${HOME}/.config/
 ln -sfn ${PWD}/rofi/ ${HOME}/.config/
 ln -sfn ${PWD}/nvim/ ${HOME}/.config/
+ln -sfn ${PWD}/.emacs.d/ ${HOME}/
 ln -sfn ${PWD}/.colors/ ${HOME}
 ln -sfn ${PWD}/.dircolors/ ${HOME}
 
