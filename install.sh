@@ -19,21 +19,18 @@
 
 set -o nounset                                  # Treat unset variables as an error
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 ln -sfn ${PWD}/.scripts/ ${HOME}
 ln -sfn ${PWD}/.wallpaper ${HOME}
 ln -sfn ${PWD}/.Xresources ${HOME}
 ln -sfn ${PWD}/.zshrc ${HOME}
 ln -sfn ${PWD}/.tmux.conf  ${HOME}
-ln -sfn ${PWD}/.vimrc ${HOME}
 ln -sfn ${PWD}/.spacemacs ${HOME}
 ln -sfn ${PWD}/i3/ ${HOME}/.config/
 ln -sfn ${PWD}/polybar/ ${HOME}/.config/
 ln -sfn ${PWD}/zathura/ ${HOME}/.config/
 ln -sfn ${PWD}/termite/ ${HOME}/.config/
 ln -sfn ${PWD}/rofi/ ${HOME}/.config/
-ln -sfn ${PWD}/UltiSnips/ ${HOME}/.vim/
+ln -sfn ${PWD}/nvim/ ${HOME}/.config/
 ln -sfn ${PWD}/.colors/ ${HOME}
 ln -sfn ${PWD}/.dircolors/ ${HOME}
 

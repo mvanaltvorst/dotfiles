@@ -9,8 +9,13 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
     - `sudo pacman -S polybar`
 - zathura
     - `sudo pacman -S zathura zathura-pdf-mupdf`
-- vim + Vundle.vim
-    - `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+- nvim + vim-plug
+    - `sudo pacman -S neovim`
+    - `curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+    - `sudo pip install pynvim python-language-server`
+    - `:PlugInstall`
+    - `:CocInstall coc-python`
 - zsh
     - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - termite
@@ -38,6 +43,8 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
 ### Programming
 - Rust
     - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Node.js
+    - `sudo pacman -S nodejs npm`
 - Jupyter notebook
     - `sudo pip3 install jupyter`
 - GDB + radare2
