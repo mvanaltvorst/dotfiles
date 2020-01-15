@@ -213,5 +213,8 @@ exec --no-startup-id redshift -t 6500:3000 &
 exec_always --no-startup-id wal -R; $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Bind caps lock to super
+exec --no-startup-id setxkbmap -option caps:super
+
 gaps inner 0
 gaps outer 0

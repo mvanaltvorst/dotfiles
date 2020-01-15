@@ -16,6 +16,10 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
     - `sudo pip install pynvim python-language-server`
     - `:PlugInstall`
     - `:CocInstall coc-python`
+- doom emacs
+    - `git clone https://github.com/hlissner/doom-emacs ~/.emacs.d`
+    - `sudo pacman -S emacs`
+    - `~/.emacs.d/bin/doom install`
 - zsh
     - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - termite
@@ -44,6 +48,10 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
       - this is one-way only, so only machine => Dropbox
     - `sudo pacman -S rclone entr`
     - `systemctl --user enable dropbox`
+- Anki
+    - `sudo pacman -S anki mpv`
+- gtk theme
+    - `yay oomox`
 
 ### Programming
 - Rust

@@ -27,7 +27,7 @@
 ;; a `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/raxod502/straight.el#the-recipe-format
 ;(package! another-package
-;  :recipe (:host github :repo "username/repo"))
+;  /recipc (:host github :repo "username/repo"))
 
 ;; If the package you are trying to install does not contain a PACKAGENAME.el
 ;; file, or is located in a subdirectory of the repo, you'll need to specify
@@ -50,3 +50,10 @@
 ;; This is required for some packages whose default branch isn't 'master' (which
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
+
+;; ERC
+;; I use erc-hl-nicks for name colors and erc-image allows me to see images without clicking on them
+(package! erc)
+(when (package! erc)
+  (package! erc-hl-nicks)
+  (package! erc-image))
