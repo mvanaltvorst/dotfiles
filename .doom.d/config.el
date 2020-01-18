@@ -32,6 +32,9 @@
 ;; `nil' to disable it:
 (setq display-line-numbers-type t)
 
+;; Disable "jk" as escape sequence in insert mode
+(setq evil-escape-inhibit t)
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -49,5 +52,28 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-(after! erc
-  (erc-autojoin-channels-alist '(("#eletronics"))))
+;;(after! erc
+  ;;(erc-autojoin-channels-alist '(("#eletronics"))))
+
+;; (use-package noflet
+;;   :demand t )
+;; (defun make-capture-frame ()
+;;   "Create a new frame and run org-capture."
+;;   (interactive)
+;;   (make-frame '((name . "capture")))
+;;   (select-frame-by-name "capture")
+;;   (delete-other-windows)
+;;   (noflet ((switch-to-buffer-other-window (buf) (switch-to-buffer buf)))
+;;            (org-capture)))
+
+(defun tl/post-capture ()
+  (if (equal "org-protocol-capture" (frame-parameter nil 'name))
+      (delete-frame)))
+
+(add-hook 'org-capture-after-finalize-hook 'tl/post-capture)
+
+;;(defun activate-capture-frame ()
+  ;;"run org-capture in capture frame"
+  ;;(select-frame-by-name "org-protocol-capture")
+  ;;(switch-to-buffer (get-buffer-create "*scratch*"))
+  ;;(org-capture))
