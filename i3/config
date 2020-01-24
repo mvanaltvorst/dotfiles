@@ -219,7 +219,7 @@ exec --no-startup-id setxkbmap -option caps:super -option compose:ralt
 # org-capture system wide
 bindsym $mod+o exec $HOME/.emacs/bin/org-capture
 
-for_window [class="Emacs" instance="org-protocol-capture"] floating enable
+for_window [class="Emacs" instance="org-capture"] floating enable
 
 gaps inner 0
 gaps outer 0

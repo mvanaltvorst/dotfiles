@@ -7,7 +7,14 @@
 ;; These are used for a number of things, particularly for GPG configuration,
 ;; some email clients, file templates and snippets.
 (setq user-full-name "Maurits van Altvorst"
-      user-mail-address "mvanaltvorst@icloud.com")
+      user-mail-address "mvanaltvorst@icloud.com"
+
+      epa-file-encrypt-to user-mail-address
+      epg-gpg-home-directory "~/.gnupg/"
+
+      ;; t, relative or nil
+      display-line-numbers-type t
+      )
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -27,10 +34,23 @@
 
 ;; If you intend to use org, it is recommended you change this!
 (setq org-directory "~/org/")
-
-;; If you want to change the style of line numbers, change this to `relative' or
-;; `nil' to disable it:
-(setq display-line-numbers-type t)
+(after! org
+  (setq +org-capture-journal-file
+    (expand-file-name "journal.org.gpg" org-directory)
+  )
+  (setq +org-capture-persons-file
+    (expand-file-name "persons.org.gpg" org-directory)
+  )
+  (add-to-list 'org-capture-templates
+    '("h" "Person" entry (file +org-capture-persons-file)
+"* %?
+** Eigenschappen
+** Houdt van
+** Houdt niet van
+** Tijdlijn
+** Cadeautips" :jump-to-captured t)
+  )
+)
 
 ;; Disable "jk" as escape sequence in insert mode
 (setq evil-escape-inhibit t)
@@ -66,11 +86,13 @@
 ;;   (noflet ((switch-to-buffer-other-window (buf) (switch-to-buffer buf)))
 ;;            (org-capture)))
 
-(defun tl/post-capture ()
-  (if (equal "org-protocol-capture" (frame-parameter nil 'name))
-      (delete-frame)))
+;; (defun tl/post-capture ()
+;;   (if (equal "org-protocol-capture" (frame-parameter nil 'name))
+;;       (delete-frame)))
 
-(add-hook 'org-capture-after-finalize-hook 'tl/post-capture)
+;; (add-hook 'org-capture-after-finalize-hook 'tl/post-capture)
+;; ORG
+(setq org-startup-truncated 'nil)
 
 ;;(defun activate-capture-frame ()
   ;;"run org-capture in capture frame"

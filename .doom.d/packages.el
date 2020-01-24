@@ -51,8 +51,6 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
-(package! noflet)
-
 ;; ERC
 ;; I use erc-hl-nicks for name colors and erc-image allows me to see images without clicking on them
 (package! erc)
