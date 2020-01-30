@@ -198,13 +198,13 @@ exec --no-startup-id amixer set Master 20%
 exec --no-startup-id amixer set Master mute
 exec --no-startup-id amixer set Capture 95%
 exec --no-startup-id amixer set Capture nocap
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- on
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ on    
+bindsym F8 exec amixer -q -D pulse sset Master toggle
+bindsym F9 exec amixer -q -D pulse sset Master 5%- on
+bindsym F10 exec amixer -q -D pulse sset Master 5%+ on    
 #
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym F7 exec xbacklight -inc 10 # increase screen brightness
+bindsym F6 exec xbacklight -dec 10 # decrease screen brightness
 
 # for_window [class="^.*"] border pixel 1
 new_window none

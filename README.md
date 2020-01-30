@@ -1,5 +1,5 @@
 ### About
-My dotfiles and system setup, meant to be compatible with Manjaro-i3
+My dotfiles and system setup, meant to be compatible with GalliumOS
 ### Requirements
 - i3 locking
     - `sudo pacman -S i3lock xss-lock`
