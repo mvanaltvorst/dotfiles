@@ -25,7 +25,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Iosevka" :size 42))
+(setq doom-font (font-spec :family "Iosevka" :size 21))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -34,6 +34,7 @@
 
 ;; If you intend to use org, it is recommended you change this!
 (setq org-directory "~/org/")
+(setq org-startup-truncated 'nil)
 (after! org
   (setq +org-capture-journal-file
     (expand-file-name "journal.org" org-directory)
@@ -43,6 +44,9 @@
   )
   (setq +org-capture-persons-file
     (expand-file-name "persons.org" org-directory)
+  )
+  (setq +org-capture-notes-file
+    (expand-file-name "notes.org.gpg" org-directory)
   )
   (add-to-list 'org-capture-templates
     '("h" "Person" entry (file +org-capture-persons-file)
@@ -76,7 +80,3 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-;;(after! erc
-  ;;(erc-autojoin-channels-alist '(("#eletronics"))))
-
-(setq org-startup-truncated 'nil)

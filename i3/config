@@ -221,5 +221,3 @@ bindsym $mod+o exec $HOME/.emacs/bin/org-capture
 
 for_window [class="Emacs" instance="org-capture"] floating enable
 
-gaps inner 0
-gaps outer 0
