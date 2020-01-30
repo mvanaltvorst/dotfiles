@@ -20,6 +20,8 @@ My dotfiles and system setup, meant to be compatible with Manjaro-i3
     - `git clone https://github.com/hlissner/doom-emacs ~/.emacs.d`
     - `sudo pacman -S emacs`
     - `~/.emacs.d/bin/doom install`
+- gocryptfs
+    - `sudo pacman -S gocryptfs`
 - zsh
     - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - termite

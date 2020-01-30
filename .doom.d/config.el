@@ -36,10 +36,13 @@
 (setq org-directory "~/org/")
 (after! org
   (setq +org-capture-journal-file
-    (expand-file-name "journal.org.gpg" org-directory)
+    (expand-file-name "journal.org" org-directory)
+  )
+  (setq +org-capture-notes-file
+    (expand-file-name "notes.org" org-directory)
   )
   (setq +org-capture-persons-file
-    (expand-file-name "persons.org.gpg" org-directory)
+    (expand-file-name "persons.org" org-directory)
   )
   (add-to-list 'org-capture-templates
     '("h" "Person" entry (file +org-capture-persons-file)
@@ -50,6 +53,7 @@
 ** Tijdlijn
 ** Cadeautips" :jump-to-captured t)
   )
+  (add-to-list 'org-modules 'org-habit t)
 )
 
 ;; Disable "jk" as escape sequence in insert mode
@@ -75,27 +79,4 @@
 ;;(after! erc
   ;;(erc-autojoin-channels-alist '(("#eletronics"))))
 
-;; (use-package noflet
-;;   :demand t )
-;; (defun make-capture-frame ()
-;;   "Create a new frame and run org-capture."
-;;   (interactive)
-;;   (make-frame '((name . "capture")))
-;;   (select-frame-by-name "capture")
-;;   (delete-other-windows)
-;;   (noflet ((switch-to-buffer-other-window (buf) (switch-to-buffer buf)))
-;;            (org-capture)))
-
-;; (defun tl/post-capture ()
-;;   (if (equal "org-protocol-capture" (frame-parameter nil 'name))
-;;       (delete-frame)))
-
-;; (add-hook 'org-capture-after-finalize-hook 'tl/post-capture)
-;; ORG
 (setq org-startup-truncated 'nil)
-
-;;(defun activate-capture-frame ()
-  ;;"run org-capture in capture frame"
-  ;;(select-frame-by-name "org-protocol-capture")
-  ;;(switch-to-buffer (get-buffer-create "*scratch*"))
-  ;;(org-capture))
