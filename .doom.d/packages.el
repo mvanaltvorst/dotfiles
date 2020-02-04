@@ -54,5 +54,5 @@
 ;; ERC
 ;; I use erc-hl-nicks for name colors and erc-image allows me to see images without clicking on them
 (package! erc)
-(package! erc-hl-nicks)
-(package! erc-image)
+;;(package! erc-hl-nicks)
+;;(package! erc-image)

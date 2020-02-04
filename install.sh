@@ -32,6 +32,7 @@ ln -sfn ${PWD}/termite/ ${HOME}/.config/
 ln -sfn ${PWD}/rofi/ ${HOME}/.config/
 ln -sfn ${PWD}/nvim/ ${HOME}/.config/
 ln -sfn ${PWD}/systemd/ ${HOME}/.config/
+ln -sfn ${PWD}/dunst/ ${HOME}/.config/
 ln -sfn ${PWD}/.doom.d/ ${HOME}/
 ln -sfn ${PWD}/.colors/ ${HOME}
 ln -sfn ${PWD}/.dircolors/ ${HOME}

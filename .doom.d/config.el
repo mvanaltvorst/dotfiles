@@ -10,31 +10,26 @@
       user-mail-address "mvanaltvorst@icloud.com"
 
       epa-file-encrypt-to user-mail-address
-      epg-gpg-home-directory "~/.gnupg/"
+      epg-gpg-home-directory "~/.gnupg/")
 
-      ;; t, relative or nil
-      display-line-numbers-type t
-      )
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
-;; are the three important ones:
-;;
-;; + `doom-font'
-;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'
-;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
-;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Iosevka" :size 21))
+;; themes
+(setq doom-font (font-spec :family "Iosevka" :size 42)
+      doom-theme 'doom-one)
 
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. These are the defaults
-(setq doom-theme 'doom-one)
+;; org
+(setq org-directory "~/org/"
+      org-agenda-files "~/org/"
+      org-habit-show-all-today t
+      org-startup-truncated 'nil
 
-;; If you intend to use org, it is recommended you change this!
-(setq org-directory "~/org/")
-(setq org-startup-truncated 'nil)
+      org-pretty-entities t
+      org-hide-emphasis-markers t)
+
+;; misc
+(setq display-line-numbers-type t
+      evil-escape-inhibit t)
+
 (after! org
   (setq +org-capture-journal-file
     (expand-file-name "journal.org" org-directory)
@@ -44,9 +39,6 @@
   )
   (setq +org-capture-persons-file
     (expand-file-name "persons.org" org-directory)
-  )
-  (setq +org-capture-notes-file
-    (expand-file-name "notes.org.gpg" org-directory)
   )
   (add-to-list 'org-capture-templates
     '("h" "Person" entry (file +org-capture-persons-file)
@@ -59,10 +51,6 @@
   )
   (add-to-list 'org-modules 'org-habit t)
 )
-
-;; Disable "jk" as escape sequence in insert mode
-(setq evil-escape-inhibit t)
-
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
