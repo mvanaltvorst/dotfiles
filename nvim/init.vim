@@ -8,9 +8,9 @@ call plug#begin()
 " LaTeX
 Plug 'lervag/vimtex' 
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
-let g:vimtex_view_method = 'zathura'
 set conceallevel=2
 let g:tex_conceal = 'abdmg'
+let g:tex_flavor = 'latex'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -18,9 +18,6 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
-
-" Color scheme
-Plug 'dylanaraps/wal'
 
 " NERDTree
 Plug 'preservim/nerdtree'
@@ -47,8 +44,3 @@ set cmdheight=1
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
-
-" PlatformIO
-let g:localvimrc_sandbox = 0 " for code completion
-
-colorscheme wal

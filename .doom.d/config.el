@@ -14,7 +14,7 @@
 
 
 ;; themes
-(setq doom-font (font-spec :family "Iosevka" :size 42)
+(setq doom-font (font-spec :family "Iosevka" :size 24)
       doom-theme 'doom-one)
 
 ;; org
