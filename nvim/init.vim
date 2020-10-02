@@ -5,7 +5,7 @@ filetype off
 
 call plug#begin()
 
-" LaTeX
+" LaTeX editing
 Plug 'lervag/vimtex' 
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 set conceallevel=2
